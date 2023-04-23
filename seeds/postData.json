@@ -1,17 +1,63 @@
 [
   {
-    "name": "Music Near Me",
-    "description": "A mobile app that will send you notifications whenever a concert is playing in your area.",
-    "needed_funding": 5000
+    "title": "5 Exciting New Tech Gadgets You Need to Know About",
+    "content": "From smart watches to virtual reality headsets, there are always new tech gadgets hitting the market. Here are five of the most exciting ones you need to know about!",
+    "user_id": 1,
+    "created_at": "2023-04-23T10:30:00Z"
   },
   {
-    "name": "The Ultimate Tech Quiz",
-    "description": "A web app that will give users 10 new technical questions each day and track their progress in things like programming, cybersecurity, database architecture, and more!",
-    "needed_funding": 10000
+    "title": "How AI is Changing the World of Business",
+    "content": "Artificial intelligence is rapidly transforming the way businesses operate. From chatbots to data analytics, learn about how AI is revolutionizing industries across the board.",
+    "user_id": 1,
+    "created_at": "2023-04-22T14:45:00Z"
   },
   {
-    "name": "Roll 'Em Up",
-    "description": "A game for Windows and macOS where players move a ball through a series of increasingly challenging mazes.",
-    "needed_funding": 800
+    "title": "The Pros and Cons of Working Remotely in Tech",
+    "content": "Remote work has become increasingly popular in the tech industry, but it's not without its challenges. Here are some of the pros and cons to consider if you're thinking about a remote job.",
+    "user_id": 1,
+    "created_at": "2023-04-21T09:15:00Z"
+  },
+  {
+    "title": "Why Super Mario 64 is the best Mario game",
+    "content": "Super Mario 64 has it all: great graphics, tight controls, and tons of secrets to discover. It's the game that defined 3D platformers and set the standard for all future Mario games. If you haven't played it yet, you're missing out!",
+    "user_id": 2,
+    "created_at": "2023-04-19T16:00:00Z"
+  },
+  {
+    "title": "The best indie games you've never heard of",
+    "content": "There are so many great indie games out there that never get the attention they deserve. Here are a few of my favorites: Hollow Knight, Celeste, and Katana ZERO. Trust me, you won't regret checking these out.",
+    "user_id": 2,
+    "created_at": "2023-04-18T11:30:00Z"
+  },
+  {
+    "title": "My favorite gaming memories",
+    "content": "I've been a gamer for as long as I can remember, and I've had some amazing experiences over the years. From beating my first boss in Zelda to discovering the twist in BioShock, gaming has given me some of my fondest memories. What are some of your favorite gaming memories?",
+    "user_id": 2,
+    "created_at": "2023-04-17T14:00:00Z"
+  },
+  {
+    "title": "Learning to cook from my grandmother",
+    "content": "My grandmother was an amazing cook and I learned so much from her. She taught me how to make the perfect spaghetti sauce, the best chicken soup, and the most delicious apple pie. I feel so lucky to have had her in my life and to have learned so much from her.",
+    "user_id": 3,
+    "created_at": "2023-04-15T19:45:00Z"
+  },
+  {
+    "title": "Experimenting with new flavors",
+    "content": "I love experimenting with new flavors in the kitchen. Recently, I tried making a spicy Thai chicken curry and it turned out amazing! The combination of spices and herbs really made the dish come alive. I can't wait to try more new recipes and expand my cooking skills.",
+    "user_id": 3
+  },
+  {
+    "title": "Why 'The Empire Strikes Back' is the best Star Wars film",
+    "content": "The Empire Strikes Back is often hailed as the best Star Wars film of all time, and for good reason. The movie has some of the most iconic moments in Star Wars history, from the reveal of Darth Vader as Luke's father to the Battle of Hoth. But what really sets it apart is the way it explores the characters and their relationships. The dynamic between Luke, Vader, and the Emperor is fascinating to watch, and the way Han and Leia's relationship develops is also very well done. Overall, The Empire Strikes Back is a masterpiece of filmmaking and a true classic.",
+    "user_id": 4
+  },
+  {
+    "title": "Why 'The Last Jedi' is unfairly maligned",
+    "content": "The Last Jedi is one of the most divisive films in the Star Wars franchise, with some fans hailing it as a masterpiece and others decrying it as a betrayal of the series. But I believe that the hate for The Last Jedi is largely unfounded. The movie takes risks and subverts expectations in a way that is very different from previous Star Wars films, but that's part of what makes it so interesting. The character development is excellent, particularly for Rey and Kylo Ren, and the themes of failure, redemption, and the cyclical nature of history are all very well done. Overall, The Last Jedi may not be for everyone, but it's a bold and compelling addition to the Star Wars saga.",
+    "user_id": 4
+  },
+  {"title": "The Top 10 Lamborghinis of All Time",
+  "content": "Lamborghini has produced some of the most iconic and memorable cars in automotive history. Here are the top 10 Lamborghinis of all time!",
+  "user_id": 5
   }
 ]
