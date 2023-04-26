@@ -25,6 +25,7 @@ Comment.init(
             references: {
                 model: 'user',
                 key: 'id',
+                onDelete: 'SET NULL',
             },
         },
         post_id: {
