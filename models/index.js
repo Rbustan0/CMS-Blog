@@ -11,7 +11,6 @@ Post.belongsTo(User, {
   onDelete: 'CASCADE',
 });
 
-// TODO: Check to see if user has many comments.
 // User.hasMany(Comment, {
 //   foreignKey: 'user_id',
 // });
