@@ -19,6 +19,11 @@ router.get('/', async (req, res) => {
   }
 });
 
+
+
+// ! RENDER PAGES FOR HANDLEBARS
+// --------------------------------------------------------
+
 // Render the login page
 router.get('/login', (req, res) => {
   // If the user is already logged in, redirect to the homepage
