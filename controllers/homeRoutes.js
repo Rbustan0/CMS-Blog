@@ -3,10 +3,6 @@ const { Post, User, Comment } = require('../models');
 const withAuth = require('../utils/auth');
 
 // Render the homepage with all posts and the username of the user who made each post
-
-
-
-
 router.get('/', async (req, res) => {
   try {
     const postData = await Post.findAll({
