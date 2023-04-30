@@ -3,7 +3,7 @@ const { Comment } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 // Posts comment assuming user is authenticated and on the post page.
-router.post('/', withAuth, async (req, rest)=>{
+router.post('/', withAuth, async (req, res)=>{
     try{
         const newComment = await Comment.create({
             ...req.body,
@@ -15,7 +15,7 @@ router.post('/', withAuth, async (req, rest)=>{
     }
     catch (err){
         console.log(err);
-        rest.status(500).json(err);
+        res.status(500).json(err);
     }
 });
 
