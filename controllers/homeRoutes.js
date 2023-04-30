@@ -3,6 +3,10 @@ const { Post, User, Comment } = require('../models');
 const withAuth = require('../utils/auth');
 
 // Render the homepage with all posts and the username of the user who made each post
+
+
+
+
 router.get('/', async (req, res) => {
   try {
     const postData = await Post.findAll({
@@ -21,8 +25,6 @@ router.get('/', async (req, res) => {
 
 
 
-// ! RENDER PAGES FOR HANDLEBARS
-// --------------------------------------------------------
 
 // Render the login page
 router.get('/login', (req, res) => {
