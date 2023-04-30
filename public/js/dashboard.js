@@ -37,10 +37,27 @@ const delButtonHandler = async (event) => {
   }
 };
 
+const editButtonHandler = async (event) => {
+  
+  const id = event.target.getAttribute('data-id');
+  
+  if (id){
+    window.location.replace(`posts/${id}/edit`);
+  }
+  
+  else{
+    alert('Failed to edit project');
+  }
+}
+
 document
   .querySelector('.new-project-form')
   .addEventListener('submit', newFormHandler);
 
+document.querySelectorAll('#delete-btn').forEach(button => {
+  button.addEventListener('click', delButtonHandler);
+});
+
 document
-  .querySelector('.project-list')
-  .addEventListener('click', delButtonHandler);
+  .querySelectorAll("#edit-btn")
+  .forEach((btn) => btn.addEventListener("click", editButtonHandler));

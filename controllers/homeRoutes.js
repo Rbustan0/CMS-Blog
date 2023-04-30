@@ -60,6 +60,7 @@ router.get('/post/:id', async (req, res) => {
       ],
     });
 
+
     const post = postData.get({ plain: true });
 
     res.render('post', { post, logged_in: req.session.logged_in });
@@ -68,6 +69,35 @@ router.get('/post/:id', async (req, res) => {
     res.status(500).json(err);
   }
 });
+
+
+// similar to above but edits the post.
+router.get('/post/:id/edit', async (req, res) => {
+  try {
+    const postData = await Post.findByPk(req.params.id, {
+      include: [
+        {
+          model: User,
+          attributes: ['username'],
+        },
+        {
+          model: Comment,
+          include: [{ model: User, attributes: ['username'] }],
+        },
+      ],
+    });
+
+
+    const post = postData.get({ plain: true });
+
+    res.render('post', { post, logged_in: req.session.logged_in });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
+
 
 // Render the user's dashboard with all their posts and the ability to create a new post
 router.get('/dashboard', withAuth, async (req, res) => {
