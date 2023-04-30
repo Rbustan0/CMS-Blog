@@ -40,12 +40,22 @@ const delButtonHandler = async (event) => {
 const editButtonHandler = async (event) => {
   
   const id = event.target.getAttribute('data-id');
-  
-  if (id){
-    window.location.replace(`posts/${id}/edit`);
-  }
-  
-  else{
+
+  if (id) {
+    const response = await fetch(`/api/posts/${id}`, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+
+    if (response.ok) {
+      const post = await response.json();
+      window.location.replace(`/posts/${id}/edit`);
+    } else {
+      alert('Failed to get post');
+    }
+  } else {
     alert('Failed to edit project');
   }
 }
