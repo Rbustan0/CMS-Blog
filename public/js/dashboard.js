@@ -42,7 +42,7 @@ const editButtonHandler = async (event) => {
   const id = event.target.getAttribute('data-id');
 
   if (id) {
-    const response = await fetch(`/api/posts/${id}`, {
+    const response = await fetch(`/post/${id}/edit`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -50,13 +50,12 @@ const editButtonHandler = async (event) => {
     });
 
     if (response.ok) {
-      const post = await response.json();
-      window.location.replace(`/posts/${id}/edit`);
+      window.location.replace(`/post/${id}/edit`);
     } else {
       alert('Failed to get post');
     }
   } else {
-    alert('Failed to edit project');
+    alert('Failed to edit post');
   }
 }
 

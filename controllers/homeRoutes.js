@@ -71,7 +71,7 @@ router.get('/post/:id', async (req, res) => {
 });
 
 
-// similar to above but edits the post.
+// similar to above but edits the post. Made a seperate request to avoid conflicts with code.
 router.get('/post/:id/edit', async (req, res) => {
   try {
     const postData = await Post.findByPk(req.params.id, {
@@ -79,18 +79,15 @@ router.get('/post/:id/edit', async (req, res) => {
         {
           model: User,
           attributes: ['username'],
-        },
-        {
-          model: Comment,
-          include: [{ model: User, attributes: ['username'] }],
-        },
-      ],
+        }
+      ]
     });
 
-
+    
     const post = postData.get({ plain: true });
 
-    res.render('post', { post, logged_in: req.session.logged_in });
+   
+    res.render('editpost', { post, logged_in: req.session.logged_in });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
