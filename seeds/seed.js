@@ -1,13 +1,15 @@
+// gets all the data we want
 const sequelize = require('../config/connection');
 const { User, Post, Comment } = require('../models');
-
 const userData = require('./userData.json');
 const postData = require('./postData.json');
 const commentData = require('./commentData.json');
 
+// seeds the database through sequelize
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
 
+  // Bulk creates all the seeded data in seeds folder
   const users = await User.bulkCreate(userData, {
     individualHooks: true,
     returning: true,

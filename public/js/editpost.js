@@ -6,8 +6,9 @@ const editPostFormHandler = async (event) => {
     const title = document.querySelector('#post-name').value.trim();
     const content = document.querySelector('#post-desc').value.trim();
 
+    // If information is not empty
     if (title && content){
-       
+        // fetches the put route we need from api folder.
         const response = await fetch(`/api/posts/${id}`, {
            
             method: 'PUT',
@@ -17,8 +18,8 @@ const editPostFormHandler = async (event) => {
             headers: {'Content-Type': 'application/json'},
         
         });
+        // if response was successful redirect back to dashboard.
         if(response.ok) {
-            const data = await response.json();
             window.location.replace('/dashboard');
         }
         else {
