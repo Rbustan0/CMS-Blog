@@ -89,15 +89,14 @@ nodemon, node, mysql2, sequelize, express, SQL Workbench, handlebars, Insomnia
 <br/>
 
 
-## Walkthrough
+## Deployment
 
 <br/>
 
-Here is a video recording of the program execution:
+* deployed link: [Deployed Github Page](https://github.com/Rbustan0/ORMius)
 
 <br/>
 
-[Deployed Github Page](https://github.com/Rbustan0/ORMius)
-
-[Heroku Link] 
+* Click on this link to see an example of the site without running your own seeded database:
+[Heroku Link](https://shielded-dusk-67786.herokuapp.com/) 
 
