@@ -1,3 +1,4 @@
+// connects to a local host as well as a port on jawsdb
 const Sequelize = require('sequelize');
 require('dotenv').config();
 

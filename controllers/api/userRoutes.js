@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { User } = require('../../models');
 
+// required route for login that saves the information in a session.
 router.post('/', async (req, res) => {
   try {
     const userData = await User.create(req.body);
@@ -18,7 +19,7 @@ router.post('/', async (req, res) => {
     res.status(400).json(err);
   }
 });
-
+// posts login information for the user to be able to login.
 router.post('/login', async (req, res) => {
   try {
     const userData = await User.findOne({ where: { email: req.body.email } });
@@ -52,6 +53,7 @@ router.post('/login', async (req, res) => {
   }
 });
 
+// allows user to loutout as necessary.
 router.post('/logout', (req, res) => {
   if (req.session.logged_in) {
     req.session.destroy(() => {

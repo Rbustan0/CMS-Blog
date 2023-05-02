@@ -1,3 +1,4 @@
+// routing all the shtuff needed for api calls.
 const router = require('express').Router();
 const userRoutes = require('./userRoutes');
 const postRoutes = require('./postRoutes');
