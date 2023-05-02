@@ -1,27 +1,33 @@
 const editPostFormHandler = async (event) => {
     event.preventDefault();
 
-    const id = window.location.pathname.split('/').pop();
-    const title = document.querySelector('#post-name');
-    const content = document.querySelector('#post-desc');
+    // need to split and grab the numeric value in the link
+    const id = window.location.pathname.split('/')[2];
+    const title = document.querySelector('#post-name').value.trim();
+    const content = document.querySelector('#post-desc').value.trim();
 
-    const response = await fetch(`/api/post/${id}`, {
+    if (title && content){
        
-        method: 'PUT',
-       
-        body: JSON.stringify({title,content}),
-       
-        headers: {'Content-Type': 'application/json'},
-    
-    });
-
-    if(response.ok) {
-        window.location.replace('/dashboard');
+        const response = await fetch(`/api/posts/${id}`, {
+           
+            method: 'PUT',
+           
+            body: JSON.stringify({ title, content }),
+           
+            headers: {'Content-Type': 'application/json'},
+        
+        });
+        if(response.ok) {
+            const data = await response.json();
+            window.location.replace('/dashboard');
+        }
+        else {
+            alert('Failed to edit the post');
+        }
     }
 
-    else {
-        alert('Failed to edit the post');
-    }
+
+
 };
 
 document

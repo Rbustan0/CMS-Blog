@@ -17,7 +17,7 @@ router.post('/', withAuth, async (req, res) => {
 });
 
 // Allows the user to edit post on the edit page.
-router.put(':id', withAuth, async (req, res) => {
+router.put('/:id', withAuth, async (req, res) => {
   try {
     const post = await Post.update({
       title: req.body.title,
@@ -33,6 +33,7 @@ router.put(':id', withAuth, async (req, res) => {
     res.status(200).json(post);
   }
   catch (err) {
+    console.log(err);
     res.status(500).json(err);
   }
 });
