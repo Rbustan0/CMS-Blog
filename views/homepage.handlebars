@@ -1,28 +1,49 @@
-<div class="posts-list">
-{{#if logged_in}}
-  {{#each posts as |post|}}
-  <div class="post">
-    <h2>
-      <a href="/post/{{post.id}}">{{post.title}}</a>
-    </h2>
-    <p>{{post.content}}</p>
+<div class="container-fluid">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="posts-list">
+        {{#if logged_in}}
+        {{#each posts as |post|}}
+        <div class="card mb-4">
+          <div class="card-header">
+            <h2 class="card-title">
+              <a href="/post/{{post.id}}">{{post.title}}</a>
+            </h2>
+            <p class="card-subtitle text-muted mb-1">{{format_date post.date_created}}</p>
+          </div>
+          <div class="card-body">
+            <p class="card-text">{{post.content}}</p>
+          </div>
+        </div>
+        {{/each}}
+        {{else}}
+        {{#each posts as |post|}}
+        <div class="card mb-4">
+          <div class="card-header">
+            <h2 class="card-title">{{post.title}}</h2>
+            <p class="card-subtitle text-muted mb-1">{{format_date post.date_created}}</p>
+          </div>
+          <div class="card-body">
+            <p class="card-text">{{post.content}}</p>
+            <p class="card-text">Please log in to add a comment</p>
+          </div>
+        </div>
+        {{/each}}
+        {{/if}}
 
-  </div>
-    {{/each}}
-  {{else}}
-    {{#each posts as |post|}}
-      <h2>{{post.title}}</h2>
-      <p>{{post.content}}</p>
-      <p>Please log in to add a comment</p>
-    {{/each}}
-  {{/if}}
-
-  {{#unless logged_in}}
-  <div class="not-logged-in">
-    <h2>Log in or Sign up here to join in!</h2>
-    <div class="buttons">
-      <a href="/login" class="btn btn-primary">Join Us!</a>
+        {{#unless logged_in}}
+        <div class="card mb-4">
+          <div class="card-header">
+            <h2 class="card-title">Log in or Sign up here to join in!</h2>
+          </div>
+          <div class="card-body">
+            <div class="buttons">
+              <a href="/login" class="btn btn-primary">Join Us!</a>
+            </div>
+          </div>
+        </div>
+        {{/unless}}
+      </div>
     </div>
   </div>
-  {{/unless}}
 </div>
